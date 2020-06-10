@@ -32,6 +32,8 @@
 /* Private variables ---------------------------------------------------------*/
 static __IO uint32_t TimingDelay;
 
+void delay_us(uint32_t delay_us);
+void delay_ms(uint16_t delay_ms);
 
 
 /* Private function prototypes -----------------------------------------------*/
@@ -65,7 +67,7 @@ int main(void)
   while (1)
   {
     GPIO_SetBits(GPIOE,GPIO_Pin_4);  //熄灭LED灯
-    Delay(500);                      //延时500ms
+    delay_ms(500);                      //延时500ms
     GPIO_ResetBits(GPIOE,GPIO_Pin_4);//点亮LED灯
     Delay(500);                      //延时500ms
   }
@@ -93,6 +95,31 @@ void TimingDelay_Decrement(void)
   if (TimingDelay != 0x00)
   { 
     TimingDelay--;
+  }
+}
+//微秒级的延时
+void delay_us(uint32_t delay_us)
+{    
+  volatile unsigned int num;
+  volatile unsigned int t;
+
+  
+  for (num = 0; num < delay_us; num++)
+  {
+    t = 11;
+    while (t != 0)
+    {
+      t--;
+    }
+  }
+}
+//毫秒级的延时
+void delay_ms(uint16_t delay_ms)
+{    
+  volatile unsigned int num;
+  for (num = 0; num < delay_ms; num++)
+  {
+    delay_us(1000);
   }
 }
 
