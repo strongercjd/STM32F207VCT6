@@ -14,4 +14,8 @@
 | 06-GPIO-Input-Output | GPIO输入输出代码                       |
 | 07-GPIO-JTAG         | GPIO复用JTAG代码                       |
 | 08-GPIO-bit-band     | GPIO位带代码                           |
+| 09-EXTI              | 中断控制器代码，使用GPIO中断             |
+| 10-CRC&RNG           | STM32硬件CRC单元和随机数单元            |
+| 11-SPI               | 使用STM32的SPI控制器读取norflash       |
+| 12-SPI-Simulation    | 使用模拟SPI读取norflash               |
 
