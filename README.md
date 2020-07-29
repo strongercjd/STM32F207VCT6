@@ -18,4 +18,8 @@
 | 10-CRC&RNG           | STM32硬件CRC单元和随机数单元            |
 | 11-SPI               | 使用STM32的SPI控制器读取norflash       |
 | 12-SPI-Simulation    | 使用模拟SPI读取norflash               |
+| 13-IIC               | 使用模拟IIC读取PCF8536             |
+| 14-Flash-Program     | STM32内部Flash编程            |
+| 15-Flash-Write-Protection| STM32内部Flash写保护       |
+| 16-Flash-Read-Protection | STM32内部Flash读保护（**没有完成**）      |
 
