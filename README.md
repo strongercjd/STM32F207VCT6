@@ -22,4 +22,7 @@
 | 14-Flash-Program     | STM32内部Flash编程            |
 | 15-Flash-Write-Protection| STM32内部Flash写保护       |
 | 16-Flash-Read-Protection | STM32内部Flash读保护（**没有完成**）      |
+| 17-DMA-M-To-M | DMA内存到内存传输 |
+| 18-IWDG | 独立看门狗 |
+| 19-WWDG | 窗口看门狗 |
 
