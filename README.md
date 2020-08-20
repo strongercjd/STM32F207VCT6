@@ -25,4 +25,6 @@
 | 17-DMA-M-To-M | DMA内存到内存传输 |
 | 18-IWDG       | 独立看门狗 |
 | 19-WWDG       | 窗口看门狗 |
+| 20-Timer-Base | 定时器的基础定制中断功能 |
+| 21-Timer-PWMOUT | 定时器的PWM输出功能 |
 
