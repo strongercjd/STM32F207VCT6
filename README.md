@@ -27,4 +27,5 @@
 | 19-WWDG       | 窗口看门狗 |
 | 20-Timer-Base | 定时器的基础定制中断功能 |
 | 21-Timer-PWMOUT | 定时器的PWM输出功能 |
+| 22-Timer-InputCapture | 定时器输入捕获功能 |
 
