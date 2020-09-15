@@ -29,4 +29,5 @@
 | 21-Timer-PWMOUT | 定时器的PWM输出功能 |
 | 22-Timer-InputCapture | 定时器输入捕获功能 |
 | 23-Timer-Touchpad | 触摸按键功能 |
+| 24-ADC | ADC外设代码 |
 
