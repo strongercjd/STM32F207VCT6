@@ -33,4 +33,6 @@
 | 25-DAC | DAC外设代码                            |
 | 26-SDIO | SDIO驱动SD卡代码 |
 | 27-USART-Interrupt | 使用串口中断方式收发数据 |
+| 28-USART-Printf | 使用硬件串口打印 |
+| 29-IDE-Printf | 硬件仿真时使用IDE打印 |
 
