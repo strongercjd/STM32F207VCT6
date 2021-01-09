@@ -1,6 +1,10 @@
 # STM32F207VCT6
 > 此仓库所有的硬件和软件资料，只用于学习参考使用，在普通室温环境下使用没问题，对于参考此仓库中资料造成商业产品或工业产品故障，本人不负责
 
+[GitHub仓库](https://github.com/strongercjd/STM32F207VCT6)
+
+[码云仓库](https://gitee.com/strongercjd/STM32F207VCT6)
+
 本仓库代码多个工程同时使用01-Libraries中的库文件，如果每个工程都有个库文件，会导致整个git仓库文件很大，拉取缓慢。
 
 | name                 | 描述                                   |
