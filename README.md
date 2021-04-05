@@ -39,4 +39,7 @@
 | 27-USART-Interrupt | 使用串口中断方式收发数据 |
 | 28-USART-Printf | 使用硬件串口打印 |
 | 29-IDE-Printf | 硬件仿真时使用IDE打印 |
+| 30-ETH | 以太网应用代码 |
+| 31-USB-Host-MSC | USB Host MSC代码，读取U盘 |
+| 32-USB-Slave-MSC | USB Slave MSC代码，模拟U盘 |
 
