@@ -5,6 +5,12 @@
 
 [码云仓库](https://gitee.com/strongercjd/STM32F207VCT6)
 
+
+
+代码对应的[STM32F207系列文章](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzIxNTg1NzQwMQ==&action=getalbum&album_id=1359585244344696836&scene=173&from_msgid=2247485288&from_itemidx=1&count=3#wechat_redirect)
+
+
+
 本仓库代码多个工程同时使用01-Libraries中的库文件，如果每个工程都有个库文件，会导致整个git仓库文件很大，拉取缓慢。
 
 | name                 | 描述                                   |
@@ -42,4 +48,7 @@
 | 30-ETH | 以太网应用代码 |
 | 31-USB-Host-MSC | USB Host MSC代码，读取U盘 |
 | 32-USB-Slave-MSC | USB Slave MSC代码，模拟U盘 |
+| 33-USART-DMA-Receive | DMA串口接收（没有使用中断） |
+| 34-USART-Receive-DMAInterrupt | DMA串口接收（DMA中断） |
+| 35-USART-DMA-Receive-Interrupt | DMA串口接收（串口空闲中断） |
 
