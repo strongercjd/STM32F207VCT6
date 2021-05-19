@@ -51,4 +51,5 @@
 | 33-USART-DMA-Receive | DMA串口接收（没有使用中断） |
 | 34-USART-Receive-DMAInterrupt | DMA串口接收（DMA中断） |
 | 35-USART-DMA-Receive-Interrupt | DMA串口接收（串口空闲中断） |
+| 36-USART-DMA-Receive-Send | 串口使用DMA接收，并将收到的数据使用DMA发送出去 |
 
