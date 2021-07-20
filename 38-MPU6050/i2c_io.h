@@ -3,6 +3,22 @@
 **                                     
 **                      用来实现IO口模拟I2C总线时序的宏定义
 **
+**--------------File Info---------------------------------------------------------------------------------
+** File name:			  i2c_io.c
+** Last modified Date:  2011-05-27
+** Last Version:		1.0
+** Descriptions:		
+**--------------------------------------------------------------------------------------------------------
+** Created by:			Zhanghuping
+** Created date:		2011-05-27
+** Version:				  1.0
+** Descriptions:		The original version
+**
+**--------------------------------------------------------------------------------------------------------
+** Modified by:
+** Modified date:
+** Version:
+** Descriptions:
 **
 *********************************************************************************************************/
 #ifndef __I2C_IO_H 
@@ -34,8 +50,15 @@
 
 
 extern void I2C_IO_init(void);
-extern uint8_t I2C_Read_nbyte(uint8_t addr,uint8_t sub_addr,uint8_t *data_cache,uint32_t num);
-extern uint8_t I2C_Write_nbyte(uint8_t addr,uint8_t sub_addr,uint8_t *data_cache,uint32_t num);
+//extern uint8_t I2C_Read_nbyte(uint8_t addr,uint8_t sub_addr,uint8_t *data_cache,uint32_t num);
+//extern uint8_t I2C_Write_nbyte(uint8_t addr,uint8_t sub_addr,uint8_t *data_cache,uint32_t num);
+
+
+extern void I2C_Start(void);
+extern uint8_t I2C_Send_byte(uint8_t data);
+extern uint8_t I2C_Wait_Ack(void);
+extern void I2C_Stop(void);
+extern uint8_t I2C_Receive_byte(uint8_t flg);
 
 
 

@@ -32,7 +32,7 @@ void I2C_IO_init(void)
   
   GPIO_Init_s.GPIO_Pin =  GPIO_Pin_15 ;
   GPIO_Init_s.GPIO_Mode = GPIO_Mode_OUT; 
-  GPIO_Init_s.GPIO_OType = GPIO_OType_PP;
+  GPIO_Init_s.GPIO_OType = GPIO_OType_OD;
   GPIO_Init_s.GPIO_Speed = GPIO_Speed_50MHz;
   GPIO_Init_s.GPIO_PuPd = GPIO_PuPd_UP;
   GPIO_Init(GPIOC, &GPIO_Init_s);	
@@ -164,14 +164,12 @@ uint8_t I2C_Receive_byte(uint8_t flg)
     I2C_DELAY();
     SCL_SET();
     I2C_DELAY();
-    //读数据
-    data=data |SDA_READ();
     data=data<<1;
+    data=data|SDA_READ();//读数据
     I2C_DELAY();
     SCL_CLR();
     I2C_DELAY(); 
   }
-  data=data>>1; //往回移动1次
   //返回ACK响应
   //置为输出线
   SDA_OUT();
