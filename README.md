@@ -54,4 +54,5 @@
 | 36-USART-DMA-Receive-Send | 串口使用DMA接收，并将收到的数据使用DMA发送出去 |
 | 37-USART-Ringbuff | 串口接收，使用环形缓冲区 |
 | 38-MPU6050 | IIC读取MPU6050 |
+| 39-Measure-Time | 测量一段代码运行的时间 |
 
