@@ -38,6 +38,7 @@
 | 20-Timer-Base | 定时器的基础定制中断功能 |
 | 21-Timer-PWMOUT | 定时器的PWM输出功能 |
 | 22-Timer-InputCapture | 定时器输入捕获功能 |
+| 23-Timer-MultiTimer | 移植MultiTimer软件定时器库 |
 | 23-Timer-Touchpad | 触摸按键功能 |
 | 24-ADC | ADC外设代码 |
 | 25-DAC | DAC外设代码                            |
