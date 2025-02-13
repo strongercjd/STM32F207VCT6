@@ -28,7 +28,10 @@
 #ifdef __cplusplus  
 extern "C" {  
 #endif
-
+/*使用 PlatformTicksFunction_t 这个类型声明变量时，
+可以将其用作函数指针，指向某个无参数无返回值的函数，并且该函数的返回值类型为 uint64_t。
+在使用这个类型声明的变量时，可以将其赋值为符合这个函数指针类型定义的函数，
+然后通过函数指针调用对应的函数。*/
 typedef uint64_t (*PlatformTicksFunction_t)(void);
 
 typedef struct MultiTimerHandle MultiTimer;
@@ -43,7 +46,7 @@ struct MultiTimerHandle {
 };
 
 /**
- * @brief Platform ticks function.
+ * @brief Platform ticks function.注册获取系统时间戳函数
  * 
  * @param ticksFunc ticks function.
  * @return int 0 on success, -1 on error.
@@ -75,6 +78,9 @@ int MultiTimerStop(MultiTimer* timer);
  * @return int The next timer expires.
  */
 int MultiTimerYield(void);
+
+
+void MultiTimerinfo(void);
 
 #ifdef __cplusplus
 } 

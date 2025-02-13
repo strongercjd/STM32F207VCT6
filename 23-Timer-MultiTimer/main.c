@@ -52,16 +52,23 @@ uint64_t PlatformTicksGetFunc(void)
 { 
   return Systick_Count_ms;
 }
-void exampleTimer1Callback(MultiTimer* timer, void *userData)
-{
-  GPIO_ResetBits(GPIOE,GPIO_Pin_4);//µ„¡¡LEDµ∆
-  MultiTimerStart(timer, 500, exampleTimer1Callback, userData);
-}
 
 void exampleTimer2Callback(MultiTimer* timer, void *userData)
 {
-  printf("[%012ld] Timer:%p callback-> %s.\r\n", Systick_Count_ms, timer, (char*)userData);
+  printf("[%012ld] Timer:%s userData:%s.\r\n", Systick_Count_ms, __FUNCTION__, (char*)userData);
 }
+
+void exampleTimer1Callback(MultiTimer* timer, void *userData)
+{
+  GPIO_ResetBits(GPIOE,GPIO_Pin_4);//µ„¡¡LEDµ∆
+  MultiTimerStart(&timer2, 5000, exampleTimer2Callback, "5000ms ONCE timer");
+  MultiTimerinfo();
+  MultiTimerStart(timer, 500, exampleTimer1Callback, "first add");
+  MultiTimerinfo();
+  MultiTimerStart(timer, 500, exampleTimer1Callback, "second add");
+  MultiTimerinfo();
+}
+
 
 void exampleTimer3Callback(MultiTimer* timer, void *userData)
 {
@@ -108,8 +115,11 @@ int main(void)
   printf("\r\n\r\n");
   
   MultiTimerStart(&timer1, 500, exampleTimer1Callback, "open led");
+  MultiTimerinfo();
   MultiTimerStart(&timer2, 5000, exampleTimer2Callback, "5000ms ONCE timer");
+  MultiTimerinfo();
   MultiTimerStart(&timer3, 100, exampleTimer3Callback, "close led");
+  MultiTimerinfo();
 
   while (1)
   {
