@@ -68,11 +68,12 @@ static uint8_t SW_task_clr(uint8_t task_id)
 static void SW_task_scan(void)
 {
   uint8_t task_id = 0;
-
+  uint32_t systick;
   do
   {
+    systick = task_info[task_id].tick;
     if ((task_info[task_id].tick_delay) &&
-        (task_info[task_id].tick >= task_info[task_id].tick_delay))
+        (systick >= task_info[task_id].tick_delay))
     {
       task_info[task_id].tick = 0;
       task_info[task_id].events |= RR_EVENTS_TIMER;
