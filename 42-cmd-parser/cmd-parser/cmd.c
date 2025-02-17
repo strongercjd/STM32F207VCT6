@@ -64,11 +64,13 @@ static void _list(void)
 {
     cmd_t *index;
     for (index = _cmd_begin; index < _cmd_end; index = _get_next_cmd(index)) {
-        printf("%s -->%s\n",index->cmd,index->desc);
+        printf("%s -->%s\n",index->cmd,index->cmd_mess);
     }
 }
 REGISTER_CMD(_list, _list,list all command);
 
+// ÉùÃ÷CMDS¶Î
+#pragma section = "CMDS"
 void cmd_init(void)
 {
     cmd_t *index;
