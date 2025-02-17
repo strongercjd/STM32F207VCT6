@@ -87,7 +87,7 @@
         </option>
         <option>
           <name>OGLastSavedByProductVersion</name>
-          <state>7.20.2.7418</state>
+          <state>7.20.5.7621</state>
         </option>
         <option>
           <name>GeneralEnableMisra</name>
@@ -305,6 +305,7 @@
           <state>$PROJ_DIR$\..</state>
           <state>$PROJ_DIR$\..\..\01-Libraries\STM32F2xx_StdPeriph_Driver\inc</state>
           <state>$PROJ_DIR$\..\..\01-Libraries\CMSIS\Device\ST\STM32F2xx\Include</state>
+          <state>$PROJ_DIR$\..\cmd-parser</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -1056,6 +1057,15 @@
   </group>
   <group>
     <name>User</name>
+    <group>
+      <name>cmd-parser</name>
+      <file>
+        <name>$PROJ_DIR$\..\cmd-parser\cmd.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\..\cmd-parser\cmd.h</name>
+      </file>
+    </group>
     <file>
       <name>$PROJ_DIR$\..\main.c</name>
     </file>
